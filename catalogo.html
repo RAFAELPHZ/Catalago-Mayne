@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Jibbitz | Universo Jibbitz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fff5f6 0%, #fce4ec 100%);
+            color: #5d4a4a;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(255, 182, 193, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #f8bbd0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #d81b60;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #f06292;
+            font-weight: 300;
+        }
+
+        .voltar {
+            color: #880e4f;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            background: #fce4ec;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .voltar:hover {
+            background: #f8bbd0;
+            color: #d81b60;
+        }
+
+        h1 {
+            color: #d81b60;
+            margin: 30px 0 20px 0;
+            text-align: center;
+        }
+
+        .categoria {
+            margin-bottom: 50px;
+        }
+
+        .categoria h2 {
+            color: #d81b60;
+            border-left: 5px solid #f06292;
+            padding-left: 20px;
+            margin-bottom: 25px;
+            margin-top: 30px;
+        }
+
+        .grid-catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .produto {
+            background: white;
+            border-radius: 20px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(216, 27, 96, 0.1);
+            border: 1px solid #f8bbd0;
+        }
+
+        .produto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(216, 27, 96, 0.2);
+        }
+
+        .produto-imagem {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+            background: #fce4ec;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            margin-bottom: 12px;
+        }
+
+        .produto-nome {
+            font-weight: bold;
+            color: #d81b60;
+            margin: 10px 0 5px;
+        }
+
+        .produto-preco {
+            color: #6b4c4c;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #880e4f;
+            color: #fce4ec;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-catalogo {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+            }
+            
+            .produto-imagem {
+                height: 130px;
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">UNIVERSO<span>JIBBITZ</span></a>
+            <a href="index.html" class="voltar">← Voltar ao início</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>📸 Nosso Catálogo de Jibbitz</h1>
+        <p style="text-align: center; margin-bottom: 30px;">Clique nos produtos que você gostar e faça seu pedido pelo WhatsApp!</p>
+
+        <!-- Coleção Personagens -->
+        <div id="personagens" class="categoria">
+            <h2>🎬 Personagens Favoritos</h2>
+            <div class="grid-catalogo">
+                <div class="produto">
+                    <div class="produto-imagem">🦸</div>
+                    <div class="produto-nome">Super Herói</div>
+                    <div class="produto-preco">R$ 12,00</div>
+                    <a href="https://wa.me/554691401946?text=Olá!%20Quero%20comprar%20o%20Jibbitz%20Super%20Herói" class="btn-whatsapp">🛍️ Comprar</a>
+                </div>
+                <div class="produto">
+                    <div class="produto-imagem">👸</div>
+                    <div class="produto-nome">Princesa</div>
+                    <div class="produto-preco">R$ 12,00</div>
+                    <a href="https://wa.me/554691401946?text=Olá!%20Quero%20comprar%20o%20Jibbitz%20Princesa" class="btn-whatsapp">🛍️ Comprar</a>
+                </div>
+                <div class="produto">
+                    <div class="produto-imagem">🦸‍♀️</div>
+                    <div class="produto-nome">Mulher Maravilha</div>
+                    <div class="produto-preco">R$ 14,00</div>
+                    <a href="https://wa.me/554691401946?text=Olá!%20Quero%20comprar%20o%20Jibbitz%20Mulher%20Maravilha" class="btn-whatsapp">🛍️ Comprar</a>
+                </div>
+                <div class="produto">
+                    <div class="produto-imagem">🕷️</div>
+                    <div class="produto-nome">Homem-Aranha</div>
+                    <div class="produto-preco">R$ 13,00</div>
+                    <a href="https://wa.me/554691401946?text=Olá!%20Quero%20comprar%20o%20Jibbitz%20Homem-Aranha" class="btn-whatsapp">🛍️ Comprar</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coleção Pets -->
+        <div id="pets" class="categoria">
+            <h2>🐾 Pets & Animais</h2>
+            <div class="grid-catalogo">
+                <div class="produto">
+                    <div class="produto-imagem">🐶</div>
+                    <div class="produto-nome">Cachorrinho</div>
+                    <div class="produto-preco">R$ 10,00</div>
+                    <a href="https://wa.me/554691401946?text=Olá!%20Quero%20comprar%20o%20Jibbitz%20Cachorrinho" class="btn-whatsapp">🛍️ Comprar</a>
+                </div>
+                <div class="produto">
+                    <div class="produto-imagem">🐱</div>
+                    <div class="produto-nome">Gatinho</div>
+                    <div class="produto-preco">R$ 10,00</div>
+                    <a href="https://wa.me/554691401946?text=Olá!%20Quero%20comprar%20o%20Jibbitz%20Gatinho" class="btn-whatsapp">🛍️ Comprar</a>
+                </div>
+                <div class="produto">
+                    <div class="produto-imagem">🐰</div>
+                    <div class="produto-nome">Coelhinho</div>
+                    <div class="produto-preco">R$ 11,00</div>
+                    <a href="https://wa.me/554691401946?text=Olá!%20Quero%20comprar%20o%20Jibbitz%20Coelhinho" class="btn-whatsapp">🛍️ Comprar</a>
+                </div>
+                <div class="produto">
+                    <div class="produto-imagem">🐼</div>
+                    <div class="produto-nome">Panda</div>
+                    <div class="produto-preco">R$ 11,00</div>
+                    <a href="https://wa.me/554691401946?text=Olá!%20Quero%20comprar%20o%20Jibbitz%20Panda" class="btn-whatsapp">🛍️ Comprar</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coleção Divertidos -->
+        <div id="divertidos" class="categoria">
+            <h2>🌈 Divertidos & Coloridos</h2>
+            <div class="grid-catalogo">
+                <div class="produto">
+                    <div class="produto-imagem">😍</div>
+                    <div class="produto-nome">Emoji Apaixonado</div>
+                    <div class="produto-preco">R$ 10,00</div>
+                    <a href="https://wa.me/554691401946?text=Olá!%20Quero%20comprar%20o%20Jibbitz%20Emoji%20Apaixonado" class="btn-whatsapp">🛍️ Comprar</a>
+                </div>
+                <div class="produto">
+                    <div class="produto-imagem">🍕</div>
+                    <div class="produto-nome">Pizza</div>
+                    <div class="produto-preco">R$ 11,00</div>
+                    <a href="https://wa.me/554691401946?text=Olá!%20Quero%20comprar%20o%20Jibbitz%20Pizza" class="btn-whatsapp">🛍️ Comprar</a>
+                </div>
+                <div class="produto">
+                    <div class="produto-imagem">🌈</div>
+                    <div class="produto-nome">Arco-Íris</div>
+                    <div class="produto-preco">R$ 10,00</div>
+                    <a href="https://wa.me/554691401946?text=Olá!%20Quero%20comprar%20o%20Jibbitz%20Arco-Íris" class="btn-whatsapp">🛍️ Comprar</a>
+                </div>
+                <div class="produto">
+                    <div class="produto-imagem">⭐</div>
+                    <div class="produto-nome">Estrela Brilhante</div>
+                    <div class="produto-preco">R$ 10,00</div>
+                    <a href="https://wa.me/554691401946?text=Olá!%20Quero%20comprar%20o%20Jibbitz%20Estrela" class="btn-whatsapp">🛍️ Comprar</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coleção Completa / Ofertas -->
+        <div id="completa" class="categoria">
+            <h2>🎁 Coleção Completa + Ofertas</h2>
+            <div class="grid-catalogo">
+                <div class="produto">
+                    <div class="produto-imagem">🎒</div>
+                    <div class="produto-nome">Kit 5 Jibbitz</div>
+                    <div class="produto-preco">R$ 35,00 (Economize R$ 15)</div>
+                    <a href="https://wa.me/554691401946?text=Olá!%20Quero%20o%20Kit%20com%205%20Jibbitz" class="btn-whatsapp">🛍️ Comprar Kit</a>
+                </div>
+                <div class="produto">
+                    <div class="produto-imagem">🎁</div>
+                    <div class="produto-nome">Compre 4 + 1 Grátis</div>
+                    <div class="produto-preco">Promoção Especial</div>
+                    <a href="https://wa.me/554691401946?text=Olá!%20Quero%20aproveitar%20a%20promoção%20Compre%204%20e%20leve%201%20grátis" class="btn-whatsapp">🎉 Garantir Oferta</a>
+                </div>
+                <div class="produto">
+                    <div class="produto-imagem">✨</div>
+                    <div class="produto-nome">Mix Surpresa</div>
+                    <div class="produto-preco">R$ 25,00 (10 unidades)</div>
+                    <a href="https://wa.me/554691401946?text=Olá!%20Quero%20o%20Mix%20Surpresa%20de%20Jibbitz" class="btn-whatsapp">🛍️ Comprar Mix</a>
+                </div>
+                <div class="produto">
+                    <div class="produto-imagem">🏷️</div>
+                    <div class="produto-nome">Qualquer 4 unidades</div>
+                    <div class="produto-preco">R$ 38,00</div>
+                    <a href="https://wa.me/554691401946?text=Olá!%20Quero%204%20Jibbitz%20à%20escolha" class="btn-whatsapp">🛍️ Escolher 4</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Universo Jibbitz - Personalizando cada passo.</p>
+        <p style="margin-top: 10px;">📱 WhatsApp: (46) 9140-1946</p>
+    </footer>
+</body>
+</html>
