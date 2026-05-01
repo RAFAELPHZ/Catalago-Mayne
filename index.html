@@ -4,7 +4,272 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universo Jibbitz | Catálogo Exclusivo</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #5d4a4a; /* Marrom acinzentado suave para o texto */
+            background: linear-gradient(135deg, #fff5f6 0%, #fce4ec 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(255, 182, 193, 0.3);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #f8bbd0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #d81b60;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #f06292;
+            font-weight: 300;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #880e4f;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f06292;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 30px;
+            padding: 60px 40px;
+            text-align: center;
+            margin-top: 80px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(216, 27, 96, 0.1);
+            border: 1px solid #f8bbd0;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #d81b60;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #6b4c4c;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #d81b60;
+            border-left: 5px solid #f06292;
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Grid de Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(216, 27, 96, 0.1);
+            border: 1px solid #f8bbd0;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(216, 27, 96, 0.2);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #d81b60;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #6b4c4c;
+            margin: 10px 0;
+        }
+
+        .card strong {
+            color: #d81b60;
+            font-size: 1.1rem;
+        }
+
+        /* Botão WhatsApp */
+        .habilidade-tag {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+
+        .habilidade-tag:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
+
+        /* Ofertas Section (adicionei pois seu menu tem link) */
+        .ofertas-box {
+            background: linear-gradient(135deg, #fff0f3, #ffe4ed);
+            border-radius: 25px;
+            padding: 35px;
+            text-align: center;
+            border: 2px dashed #f06292;
+        }
+
+        .ofertas-box p {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .ofertas-box .preco-oferta {
+            font-size: 2rem;
+            color: #d81b60;
+            font-weight: bold;
+        }
+
+        /* FAQ Itens */
+        .faq-item {
+            background: white;
+            border-radius: 15px;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-left: 5px solid #f06292;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .faq-item h4 {
+            color: #d81b60;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            color: #6b4c4c;
+        }
+
+        /* Footer */
+        footer {
+            background: #880e4f;
+            color: #fce4ec;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-content p {
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: #f8bbd0;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 20px;
+            border-radius: 30px;
+        }
+
+        .social-links a:hover {
+            color: white;
+            background: #d81b60;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            .hero {
+                margin-top: 110px;
+                padding: 30px 20px;
+            }
+            
+            .section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -33,33 +298,39 @@
                     <h3>🎬 Personagens Favoritos</h3>
                     <p>Deixe seus heróis e desenhos favoritos acompanharem você.</p>
                     <p><strong>A partir de R$ 12,00</strong></p>
-                    <br>
-                    <a href="https://wa.me/SEUNUMERO" class="habilidade-tag" style="text-decoration: none;">🛍️ Ver no WhatsApp</a>
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20comprar%20Jibbitz%20da%20coleção%20Personagens%20Favoritos" class="habilidade-tag">🛍️ Ver no WhatsApp</a>
                 </div>
 
                 <div class="card">
                     <h3>🐾 Pets & Animais</h3>
                     <p>Patinhas, gatinhos e bichinhos fofos para decorar seu calçado.</p>
                     <p><strong>A partir de R$ 10,00</strong></p>
-                    <br>
-                    <a href="https://wa.me/SEUNUMERO" class="habilidade-tag" style="text-decoration: none;">🛍️ Ver no WhatsApp</a>
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20comprar%20Jibbitz%20da%20coleção%20Pets%20e%20Animais" class="habilidade-tag">🛍️ Ver no WhatsApp</a>
                 </div>
 
                 <div class="card">
                     <h3>🌈 Divertidos & Coloridos</h3>
                     <p>Emojis, comidas e símbolos que são puro estilo.</p>
                     <p><strong>A partir de R$ 10,00</strong></p>
-                    <br>
-                    <a href="https://wa.me/SEUNUMERO" class="habilidade-tag" style="text-decoration: none;">🛍️ Ver no WhatsApp</a>
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20comprar%20Jibbitz%20Divertidos%20e%20Coloridos" class="habilidade-tag">🛍️ Ver no WhatsApp</a>
                 </div>
 
                 <div class="card">
                     <h3>⭐ Coleção Brilha no Escuro</h3>
                     <p>Jibbitz especiais que dão um show quando as luzes apagam.</p>
                     <p><strong>A partir de R$ 15,00</strong></p>
-                    <br>
-                    <a href="https://wa.me/SEUNUMERO" class="habilidade-tag" style="text-decoration: none;">🛍️ Ver no WhatsApp</a>
+                    <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20comprar%20Jibbitz%20Brilha%20no%20Escuro" class="habilidade-tag">🛍️ Ver no WhatsApp</a>
                 </div>
+            </div>
+        </section>
+
+        <!-- Seção de Ofertas (adicionada para o menu) -->
+        <section id="ofertas" class="section">
+            <h2>🔥 Ofertas Imperdíveis</h2>
+            <div class="ofertas-box">
+                <p>🎁 <strong>Compre 4 Jibbitz e leve 1 GRÁTIS!</strong> 🎁</p>
+                <p class="preco-oferta">+ Frete Grátis para compras acima de R$ 50</p>
+                <a href="https://wa.me/5511999999999?text=Quero%20aproveitar%20a%20OFERTA%20de%20Jibbitz!" class="habilidade-tag">Garantir minha oferta →</a>
             </div>
         </section>
 
@@ -84,7 +355,9 @@
         <div class="footer-content">
             <p>&copy; 2026 Universo Jibbitz - Personalizando cada passo.</p>
             <div class="social-links">
-                <a href="#">IG</a> <a href="#">WA</a> </div>
+                <a href="#">📸 Instagram</a>
+                <a href="https://wa.me/5511999999999">💬 WhatsApp</a>
+            </div>
         </div>
     </footer>
 </body>
